@@ -62,3 +62,23 @@ msgstr ""
 msgctxt "#32110"
 msgid "Enabled"
 msgstr ""
+
+msgctxt "#32111"
+msgid "1.6x"
+msgstr ""
+
+msgctxt "#32112"
+msgid "1.7x"
+msgstr ""
+
+msgctxt "#32113"
+msgid "1.8x"
+msgstr ""
+
+msgctxt "#32114"
+msgid "1.9x"
+msgstr ""
+
+msgctxt "#32115"
+msgid "2.0x"
+msgstr ""

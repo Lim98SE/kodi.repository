@@ -1,5 +1,6 @@
 import os
 import xbmc
+import xbmcvfs
 import xbmcaddon
 
 __addon__ = xbmcaddon.Addon()
@@ -11,9 +12,9 @@ __language__ = __addon__.getLocalizedString
 debug = __addon__.getSetting("debug")
 enabled = __addon__.getSetting("enabled")
 speed = __addon__.getSetting("speed")
-__cwd__ = xbmc.translatePath(__addon__.getAddonInfo('path'))
-__profile__ = xbmc.translatePath(__addon__.getAddonInfo('profile'))
-__resource__ = xbmc.translatePath(os.path.join(__cwd__, 'resources'))
+__cwd__ = xbmcvfs.translatePath(__addon__.getAddonInfo('path'))
+__profile__ = xbmcvfs.translatePath(__addon__.getAddonInfo('profile'))
+__resource__ = xbmcvfs.translatePath(os.path.join(__cwd__, 'resources'))
 
 __settings__ = xbmcaddon.Addon("service.defaultplaybackspeed")
 
@@ -23,15 +24,21 @@ tempo_down = "TempoDown"
 tempo_up = "TempoUp"
 
 # index in select list: (times to run, command)
-playBackSpeeds = {"0": (2, tempo_down),
-                  "1": (1, tempo_down),
-                  "2": (0, ""),  # 1.0x do nothing
-                  "3": (1, tempo_up),
-                  "4": (2, tempo_up),
-                  "5": (3, tempo_up),
-                  "6": (4, tempo_up),
-                  "7": (5, tempo_up)
-                  }
+playBackSpeeds = {
+                "0": (2, tempo_down),
+                "1": (1, tempo_down),
+                "2": (0, ""),  # 1.0x do nothing
+                "3": (1, tempo_up),
+                "4": (2, tempo_up),
+                "5": (3, tempo_up),
+                "6": (4, tempo_up),
+                "7": (5, tempo_up),
+                "8": (6, tempo_up),
+                "9": (7, tempo_up),
+                "10": (8, tempo_up),
+                "11": (9, tempo_up),
+                "12": (10, tempo_up)
+            }
 
 
 def Debug(msg, force=False):
